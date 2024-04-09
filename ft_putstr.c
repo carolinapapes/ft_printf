@@ -12,11 +12,11 @@ int	ft_putstr_len(const char *s)
 	if (!s)
 		s = "(null)";
 	while (len >= 0 && s[len])
-		len = ft_putchar_check(s[len], len);
+		len = ft_putchar_add(s[len], len);
 	return (len);
 }
 
-int	ft_putstr_check(const char *s, int len)
+int	ft_putstr_add(const char *s, int len)
 {
-	return (ft_check_res(len, ft_putstr_len(s)));
+	return (ft_add_res(len, ft_putstr_len(s)));
 }

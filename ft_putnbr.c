@@ -1,10 +1,10 @@
 #include "ft_printf.h"
 
-int	ft_putnbr_base_check(unsigned long int n, char *base, int len)
+int	ft_putnbr_base_add(unsigned long int n, char *base, int len)
 {
 	if (len < 0)
 		return (len);
-	return (ft_check_res(len, ft_putnbr_base(n, base, 0)));
+	return (ft_add_res(len, ft_putnbr_base(n, base, 0)));
 }
 
 int	ft_putnbr_base_int(int n)
@@ -26,14 +26,14 @@ int	ft_putnbr_base(unsigned long int n, char *base, int neg)
 	len = 0;
 	d = ft_strlen(base);
 	if (neg)
-		len = ft_putchar_check('-', len);
+		len = ft_putchar_add('-', len);
 	if (n >= d)
 	{
-		len = ft_putnbr_base_check(n / d, base, len);
-		len = ft_putnbr_base_check(n % d, base, len);
+		len = ft_putnbr_base_add(n / d, base, len);
+		len = ft_putnbr_base_add(n % d, base, len);
 	}
 	else
-		len = ft_putchar_check(base[n], len);
+		len = ft_putchar_add(base[n], len);
 	return (len);
 }
 
