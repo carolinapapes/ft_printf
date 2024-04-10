@@ -1,7 +1,15 @@
-// putstr fd 1 with return value 
-// If write() is interrupted by a signal before it writes any data, it shall return -1 with errno set to [EINTR].
-// If write() is interrupted by a signal after it successfully writes some data, it shall return the number of bytes written.
-// if s is null writes "(null)"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: capapes <capapes@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/10 21:09:46 by capapes           #+#    #+#             */
+/*   Updated: 2024/04/10 21:10:05 by capapes          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
 int	ft_putstr_len(const char *s)

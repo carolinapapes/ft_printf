@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: capapes <capapes@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/10 21:10:28 by capapes           #+#    #+#             */
+/*   Updated: 2024/04/10 21:10:34 by capapes          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 #include <unistd.h>
 
@@ -18,7 +30,3 @@ int	ft_putchar_add(char c, int len)
 {
 	return (ft_add_res(len, ft_putchar_len(c)));
 }
-
-// putchar fd 1 with return value 
-// If write() is interrupted by a signal before it writes any data, it shall return -1 with errno set to [EINTR].
-// If write() is interrupted by a signal after it successfully writes some data, it shall return the number of bytes written.
